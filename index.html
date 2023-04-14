@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>测试</title>
+	</head>
+	<body>
+		<button id="button">测试按钮</button>
+
+        <script>
+            var button = document.getElementById("button");
+            button.addEventListener("click", function() {
+                var request = new XMLHttpRequest();
+                request.onload = function(e) {
+                    console.log(e);
+                }
+                // request.open("GET", "http://192.168.0.33:3000/api");
+                request.open("GET", "http://dev.dd4r.test.com:3000/api");
+                request.send();
+            })
+        </script>
+	</body>
+</html>
